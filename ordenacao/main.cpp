@@ -126,6 +126,9 @@ int main() {
                 int numComparacoesBubble, numTrocasBubble;
                 int numComparacoesSelection, numTrocasSelection;
                 int numComparacoesInsertion, numTrocasInsertion;
+                int numComparacoesQuick, numTrocasQuick;
+                int numComparacoesMerge, numTrocasMerge;
+                int numComparacoesHeap, numTrocasHeap;
 
                 // Bubble Sort
                 bubbleSort(vetor);
@@ -142,6 +145,20 @@ int main() {
                 numComparacoesInsertion = getNumComparacoes();
                 numTrocasInsertion = getNumTrocas();
 
+                //Quick Sort
+                quickSort(vetor, 0, tamanho - 1);
+                numComparacoesQuick = getNumComparacoes();
+                numTrocasQuick = getNumTrocas();
+
+                //Merge Sort
+                mergeSort(vetor, 0, tamanho - 1);
+                numComparacoesMerge = getNumComparacoes();
+                numTrocasMerge = getNumTrocas();
+
+                //Heap Sort
+                numComparacoesHeap = getNumComparacoes();
+                numTrocasHeap = getNumTrocas();
+
                 cout << "Comparação entre os métodos de ordenação:" << endl;
                 cout << "---------------------------------------" << endl;
                 cout << "Bubble Sort: " << endl;
@@ -153,13 +170,28 @@ int main() {
                 cout << "Insertion Sort: " << endl;
                 cout << "Número de comparações: " << numComparacoesInsertion << endl;
                 cout << "Número de trocas: " << numTrocasInsertion << endl;
+                cout << "Quick Sort: " << endl;
+                cout << "Número de comparações: " << numComparacoesQuick << endl;
+                cout << "Número de trocas: " << numTrocasQuick << endl;
+                cout << "Merge Sort: " << endl;
+                cout << "Número de comparações: " << numComparacoesMerge << endl;
+                cout << "Número de trocas: " << numTrocasMerge << endl;
+                cout << "Heap Sort: " << endl;
+                cout << "Número de comparações: " << numComparacoesHeap << endl;
+                cout << "Número de trocas: " << numTrocasHeap << endl;
 
-                if (numTrocasBubble <= numTrocasSelection && numTrocasBubble <= numTrocasInsertion) {
+                if (numTrocasBubble <= numTrocasSelection && numTrocasBubble <= numTrocasInsertion && numTrocasBubble <= numTrocasQuick && numTrocasBubble <= numTrocasMerge && numTrocasBubble <= numTrocasHeap) {
                     cout << "Bubble Sort foi o método que realizou menos trocas." << endl;
-                } else if (numTrocasSelection <= numTrocasBubble && numTrocasBubble <= numTrocasInsertion) {
+                } else if (numTrocasSelection <= numTrocasBubble && numTrocasSelection <= numTrocasInsertion && numTrocasSelection <= numTrocasQuick && numTrocasSelection <= numTrocasMerge && numTrocasSelection <= numTrocasHeap) {
                     cout << "Selevtion sort foi o método que realizou menos trocas." << endl;
-                } else if (numTrocasInsertion <= numTrocasSelection && numTrocasInsertion <= numTrocasBubble) {
+                } else if (numTrocasInsertion <= numTrocasSelection && numTrocasInsertion <= numTrocasBubble && numTrocasInsertion <= numTrocasQuick && numTrocasInsertion <= numTrocasMerge && numTrocasInsertion <= numTrocasHeap) {
                     cout << "Insert Sort foi o método que realizou menos trocas." << endl;
+                } else if (numTrocasQuick <= numTrocasSelection && numTrocasQuick <= numTrocasBubble && numTrocasQuick <= numTrocasInsertion && numTrocasQuick <= numTrocasMerge && numTrocasQuick <= numTrocasHeap) {
+                    cout << "Quick Sort foi o método que realizou menos trocas." << endl;
+                } else if (numTrocasMerge <= numTrocasSelection && numTrocasMerge <= numTrocasBubble && numTrocasMerge <= numTrocasQuick && numTrocasMerge <= numTrocasInsertion && numTrocasMerge <= numTrocasHeap) {
+                    cout << "Merge Sort foi o método que realizou menos trocas." << endl;
+                } else if (numTrocasHeap <= numTrocasSelection && numTrocasHeap <= numTrocasBubble && numTrocasHeap <= numTrocasQuick && numTrocasHeap <= numTrocasMerge && numTrocasHeap <= numTrocasInsertion) {
+                    cout << "Heap Sort foi o método que realizou menos trocas." << endl;
                 }
                 break;
                 case 8:
