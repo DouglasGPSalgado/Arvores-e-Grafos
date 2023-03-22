@@ -12,6 +12,9 @@ class Ordenacao {
         void bubbleSort(std::vector<int> &v);
         void selectionSort(std::vector<int> &v);
         void insertionSort(std::vector<int> &v);
+        void quickSort(std::vector<int> &v, int esquerda, int direita);
+        void mergeSort(std::vector<int> &v, int inicio, int fim);
+        void heapSort(std::vector<int> &v);
         int getNumComparacoes();
         int getNumTrocas();
 

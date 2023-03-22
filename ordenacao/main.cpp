@@ -20,19 +20,24 @@ int main() {
     }
     cout << endl;
     int opcao = -1;
-    while (opcao != 5) {
+    while (opcao != 7) {
         cout << "------------------" << endl;
         cout << "MENU DE OPÇÕES" << endl;
         cout << "------------------" << endl;
         cout << "1 - Bubble Sort" << endl;
         cout << "2 - Selection Sort" << endl;
         cout << "3 - Insertion Sort" << endl;
-        cout << "4 - Comparação" << endl;
-        cout << "5 - Sair" << endl;;
+        cout << "4 - Quick Sort" << endl;
+        cout << "5 - Merge Sort" << endl;
+        cout << "6 - Heap Sort" << endl;
+        cout << "7 - Comparação" << endl;
+        cout << "8 - Sair" << endl;;
         cout << "Escolha uma opção: ";
         cin >> opcao;
         switch (opcao) {
             case 1:
+                numTrocas = 0;
+                numComparacoes = 0;
                 bubbleSort(vetor);
                 cout << "Bubble Sort executado com sucesso!" << endl;
                 cout << "Número de comparações: " << getNumComparacoes() << endl;
@@ -46,6 +51,8 @@ int main() {
                 break;
 
             case 2:
+                numTrocas = 0;
+                numComparacoes = 0;
                 selectionSort(vetor);
                 cout << "Selection Sort executado com sucesso!" << endl;
                 cout << "Número de comparações: " << getNumComparacoes() << endl;
@@ -58,6 +65,8 @@ int main() {
                 break;
 
             case 3:
+                numTrocas = 0;
+                numComparacoes = 0;
                 insertionSort(vetor);
                 cout << "Insertion Sort executado com sucesso!" << endl;
                 cout << "Número de comparações: " << getNumComparacoes() << endl;
@@ -69,7 +78,51 @@ int main() {
                 cout << endl;
                 break;
 
-            case 4:
+                case 4:
+                numTrocas = 0;
+                numComparacoes = 0;
+                quickSort(vetor, 0, tamanho - 1);
+                cout << "Quick Sort executado com sucesso!" << endl;
+                cout << "Número de comparações: " << getNumComparacoes() << endl;
+                cout << "Número de trocas: " << getNumTrocas() << endl;
+                cout << "Vetor ordenado: ";
+                for (int i = 0; i < tamanho; i++) {
+                    cout << vetor[i] << " ";
+                }
+                cout << endl;
+                break;
+
+                case 5:
+                numTrocas = 0;
+                numComparacoes = 0;
+                mergeSort(vetor, 0, tamanho - 1);
+                cout << "Merge Sort executado com sucesso!" << endl;
+                cout << "Número de comparações: " << getNumComparacoes() << endl;
+                cout << "Número de trocas: " << getNumTrocas() << endl;
+                cout << "Vetor ordenado: ";
+                for (int i = 0; i < tamanho; i++) {
+                    cout << vetor[i] << " ";
+                }
+                cout << endl;
+                break;
+
+                case 6:
+                numTrocas = 0;
+                numComparacoes = 0;
+                heapSort(vetor);
+                cout << "Heap Sort executado com sucesso!" << endl;
+                cout << "Número de comparações: " << getNumComparacoes() << endl;
+                cout << "Número de trocas: " << getNumTrocas() << endl;
+                cout << "Vetor ordenado: ";
+                for (int i = 0; i < tamanho; i++) {
+                    cout << vetor[i] << " ";
+                }
+                cout << endl;
+                break;
+
+            case 7:
+                numTrocas = 0;
+                numComparacoes = 0;
                 int numComparacoesBubble, numTrocasBubble;
                 int numComparacoesSelection, numTrocasSelection;
                 int numComparacoesInsertion, numTrocasInsertion;
@@ -109,7 +162,7 @@ int main() {
                     cout << "Insert Sort foi o método que realizou menos trocas." << endl;
                 }
                 break;
-                case 5:
+                case 8:
                 cout << "Saindo do programa..." << endl;
                 break;
 
