@@ -1,0 +1,61 @@
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border: 2px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.cell {
+  width: 98px;
+  height: 98px;
+  font-size: 60px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cell:hover {
+  background-color: #eee;
+}
+
+.cell.x {
+  color: #f00;
+}
+
+.cell.o {
+  color: #00f;
+}
+
+.status {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.status span {
+  color: #f00;
+}
+
+.play-again {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: 2px solid black;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.play-again:hover {
+  background-color: #eee;
+}
