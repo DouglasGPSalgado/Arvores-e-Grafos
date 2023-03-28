@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Menu</title>
+  </head>
+  <body>
+    <ul>
+      <li><a href="elementos_de_texto.html">Elementos de Texto</a></li>
+      <li><a href="formulario_de_contato.html">Formulário de Contato</a></li>
+      <li><a href="tabelas.html">Tabelas</a></li>
+      <li><a href="imagens.html">Imagens</a></li>
+    </ul>
+    <table>
+      <tr>
+        <th>Produto</th>
+        <th>Preço</th>
+      </tr>
+      <tr>
+        <td>Piscina de Fibra</td>
+        <td>R$ 10.000,00</td>
+      </tr>
+      <tr>
+        <td>Piscina de Concreto</td>
+        <td>R$ 15.000,00</td>
+      </tr>
+      <tr>
+        <td>Piscina Natural</td>
+        <td>R$ 20.000,00</td>
+      </tr>
+    </table>
+    <br>
+    <img src="http://3.bp.blogspot.com/-hcEt9_Jfp5E/UAIemQhwJ3I/AAAAAAAAAdQ/50lJZTfPvYE/s1600/piscina2.jpg" alt="Piscina de Azulejo">
+    <p>Uma piscina de azulejo.</p>
+    <form action="pesquisar.html" method="GET">
+      <label for="pesquisa">Pesquisar:</label>
+      <input type="text" id="pesquisa" name="pesquisa">
+      <input type="submit" value="Buscar">
+    </form>
+    <br>
+    <h2>Entre em Contato</h2>
+    <form action="enviar_email.php" method="POST">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required><br><br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required><br><br>
+      <label for="mensagem">Mensagem:</label><br>
+      <textarea id="mensagem" name="mensagem" rows="5" cols="40"></textarea><br><br>
+      <input type="submit" value="Enviar">
+    </form>
+  </body>
+</html>
