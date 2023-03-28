@@ -93,7 +93,7 @@ function App() {
       {renderBoard()}
       <div className="status">{renderStatus()}</div>
       {winner && (
-        <button className="reset" onClick={resetGame}>
+        <button className="play-again" onClick={resetGame}>
           Play again
         </button>
       )}

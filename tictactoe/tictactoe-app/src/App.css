@@ -1,12 +1,17 @@
+/*  Curso de Engenharia de Software - UniEVANGÉLICA 
+    Disciplina de Sisetmas Gerenciadores de Banco de Dados
+    Dev: Douglas Gabriel Pereira Salgado
+    Data: 27/03/2023 */
 .board {
   display: flex;
   flex-wrap: wrap;
   width: 300px;
   height: 300px;
   margin: 0 auto;
-  border: 2px solid black;
+  border: 2px solid greenyellow;
   border-radius: 5px;
   overflow: hidden;
+  align-items: center;
 }
 
 .cell {
@@ -19,19 +24,20 @@
   align-items: center;
   cursor: pointer;
   transition: background-color 0.3s;
+  border: 1.5px solid chartreuse;
 }
 
 .cell:hover {
   background-color: #eee;
 }
 
-.cell.x {
+/* .cell.X {
   color: #f00;
 }
 
-.cell.o {
+.cell.O {
   color: #00f;
-}
+} */
 
 .status {
   text-align: center;
@@ -49,7 +55,7 @@
   margin: 20px auto;
   padding: 10px 20px;
   border: 2px solid black;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
