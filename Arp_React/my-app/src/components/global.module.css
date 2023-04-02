@@ -1,0 +1,139 @@
+/* Estilos para elementos de texto */
+h1 {
+    font-weight: lighter;
+    margin-bottom: 0.5em;
+    color: #ccc;
+    background-color: #0077cc;
+    font-size: xx-large;
+    padding: 0.5em 1em;
+    width: 250px;
+    border-radius: 15px;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  
+  p {
+    font-size: larger;
+    line-height: 1.5;
+    margin-bottom: 1em;
+  }
+  
+  ul {
+    list-style: disc;
+    margin-bottom: 1em;
+    margin-left: 1em;
+  }
+  
+  li {
+    margin-bottom: 0.5em;
+  }
+  
+  a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos para formulário de contato */
+  label {
+    display: block;
+    margin-bottom: 0.5em;
+
+  }
+  
+  input[type="text"] {
+    border-radius: 15px;
+  }
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 1em;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+  select {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #0077cc;
+    border-radius: 3px;
+    margin-bottom: 1em;
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  
+  input[type="submit"] {
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  /* Estilos para imagens */
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+    border-radius: 15px;
+  }
+  
+  /* Estilos para menu */
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+  }
+  
+  li {
+    display: inline-block;
+    margin-right: 1em;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+  }
+  
+  th, td {
+    padding: 0.5em;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+  
+  th {
+    background-color: #0077cc;
+    color: #fff;
+  }
+  
+  /* Estilos para outras tabelas */
+  table.other {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table.other th, table.other td {
+    padding: 0.5em;
+    text-align: left;
+    border: 1px solid #ccc;
+  }
+  
+  table.other th {
+    background-color: #0077cc;
+    color: #fff;
+  }
+  
