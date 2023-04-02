@@ -108,8 +108,39 @@ CREATE TABLE Agendamento (
 
 -- As chaves primárias e estrangeiras são definidas para garantir a integridade referencial e a consistência dos dados. Com essa estrutura de banco de dados, a empresa pode gerenciar seus clientes, funcionários, fornecedores, produtos, vendas, agendamentos e serviços de forma eficiente e confiável.
 
+-- O código inclui um comando INSERT INTO que adiciona alguns dados à tabela "Cliente"
 INSERT INTO Cliente (id_cliente, nome, sobrenome, telefone, email, endereco) VALUES
-(1, 'José', 'Armandes', '6299565-1609', 'jose.armandes@gmail.com', 'Rua 18'),
-(2, 'José', 'Armandes', '6299565-1609', 'jose.armandes@gmail.com', 'Rua 18'),
-(3, 'José', 'Armandes', '6299565-1609', 'jose.armandes@gmail.com', 'Rua 18'),
-(4, 'José', 'Armandes', '6299565-1609', 'jose.armandes@gmail.com', 'Rua 18')
+(1, 'Josué', 'Costa', '629645-7834', 'josue.costa@gmail.com', 'Rua 876'),
+(2, 'Lucas', 'Lima', '629123-7845', 'lucas.lima@gmail.com', 'Rua 543'),
+(3, 'João', 'Armandes', '6292378-5483', 'joao.armandes@gmail.com', 'Rua 31'),
+(4, 'Miguel', 'Castro', '6299565-1609', 'miguel.castro@gmail.com', 'Rua 45');
+
+-- É uma consulta SQL que seleciona dados de uma tabela de agendamentos ("Agendamento") juntamente com informações de outras três tabelas: "Cliente", "Funcionário" e "Serviço". O objetivo da consulta é obter informações sobre os agendamentos que ainda estão "agendados" (ou seja, ainda não foram realizados).
+SELECT c.nome AS nome_cliente, f.nome AS nome_funcionario, s.nome AS nome_servico, a.data_agendamento, a.hora_agendamento
+FROM Agendamento AS a
+-- A consulta utiliza as cláusulas "JOIN" para combinar dados de várias tabelas. A cláusula "ON" é utilizada para especificar as condições de junção, ou seja, as colunas que relacionam as tabelas.
+JOIN Cliente AS c ON a.id_cliente = c.id_cliente
+JOIN Funcionario AS f ON a.id_funcionario = f.id_funcionario
+JOIN Servico AS s ON a.id_servico = s.id_servico
+-- A cláusula "WHERE" é utilizada para filtrar apenas os registros que têm o status "agendado".
+WHERE a.status = 'agendado';
+
+-- Consulta utilizando INNER JOIN
+SELECT c.nome, v.data_venda, v.total, p.descricao, iv.quantidade
+FROM Cliente c
+INNER JOIN Venda v ON c.id_cliente = v.id_cliente
+INNER JOIN Item_Venda iv ON v.id_venda = iv.id_venda
+INNER JOIN Produto p ON iv.id_produto = p.id_produto;
+
+-- Consulta utilizando LEFT JOIN
+SELECT c.nome, a.data_agendamento, a.status, s.nome
+FROM Cliente c
+LEFT JOIN Agendamento a ON c.id_cliente = a.id_cliente
+LEFT JOIN Servico s ON a.id_servico = s.id_servico;
+
+-- Consulta utilizando INNER JOIN
+SELECT c.nome, f.nome, a.data_agendamento, a.hora_agendamento
+FROM Cliente c
+INNER JOIN Agendamento a ON c.id_cliente = a.id_cliente
+INNER JOIN Funcionario f ON a.id_funcionario = f.id_funcionario
+WHERE a.status = 'agendado';

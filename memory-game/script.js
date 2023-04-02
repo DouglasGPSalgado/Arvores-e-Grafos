@@ -1,3 +1,4 @@
+
 const cards = [
   { id: 1, img: "./assets/card1.png" },
   { id: 2, img: "./assets/card2.jpg" },
@@ -17,7 +18,7 @@ shuffledCards.forEach((card) => {
   div.dataset.card = card.id;
   const front = document.createElement("div");
   front.classList.add("front");
-  div.style.backgroundImage = `url(${card.img})`;
+  div.style.backgroundImage = `url(${card.img})`; 
   div.style.backgroundSize = "cover";
   div.style.backgroundRepeat = "no-repeat";
   div.style.backgroundPosition = "center";
