@@ -1,0 +1,20 @@
+Curso de Engenharia de Software - UniEVANGÉLICA 
+Disciplina de Programação Web 
+Dev: Douglas Gabriel Pereira Salgado - 1920191
+DATA: 23/05/2023
+
+GET /api/piscinas - recuperar a lista de piscinas cadastradas no sistema
+POST /api/piscinas - criar uma nova piscina no sistema
+GET /api/piscinas/{piscina_id} - recuperar informações de uma piscina específica por ID
+PUT /api/piscinas/{piscina_id} - atualizar informações de uma piscina específica por ID
+DELETE /api/piscinas/{piscina_id} - excluir uma piscina específica por ID
+GET /api/piscinas/{piscina_id}/clientes - recuperar a lista de clientes que possuem acesso à piscina específica por ID
+POST /api/piscinas/{piscina_id}/clientes - adicionar um novo cliente à lista de acesso da piscina específica por ID
+GET /api/piscinas/{piscina_id}/clientes/{cliente_id} - recuperar informações de um cliente específico que possui acesso à piscina específica por ID
+PUT /api/piscinas/{piscina_id}/clientes/{cliente_id} - atualizar informações de um cliente específico que possui acesso à piscina específica por ID
+DELETE /api/piscinas/{piscina_id}/clientes/{cliente_id} - remover um cliente específico da lista de acesso da piscina específica por ID
+GET /api/piscinas/{piscina_id}/manutencao - recuperar a lista de atividades de manutenção agendadas para a piscina específica por ID
+POST /api/piscinas/{piscina_id}/manutencao - agendar uma nova atividade de manutenção para a piscina específica por ID
+GET /api/piscinas/{piscina_id}/manutencao/{manutencao_id} - recuperar informações de uma atividade de manutenção específica agendada para a piscina específica por ID
+PUT /api/piscinas/{piscina_id}/manutencao/{manutencao_id} - atualizar informações de uma atividade de manutenção específica agendada para a piscina específica por ID
+DELETE /api/piscinas/{piscina_id}/manutencao/{manutencao_id} - cancelar uma atividade de manutenção específica agendada para a piscina específica por ID
